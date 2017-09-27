@@ -1,4 +1,6 @@
-
+/**
+ * Practive4Test.java
+ */
 public class Practice4Test {
 	
 	protected Queue queue;
@@ -23,9 +25,17 @@ public class Practice4Test {
 		}
 	}
 	
-	
+	/**
+	 * Check whether the string given is palindrome ( regardless space or capitalization)
+	 * @param item
+	 * 			the string to be checked
+	 * @return
+	 * 			whether it is palindrome
+	 */
 	public boolean isPalindrome(String item) {
 		clearData();
+		item = item.replaceAll("[^\\w]","");
+		item=item.toLowerCase();
 		for (int i = 0; i < item.length(); i++) {
 			stack.push(item.substring(i, i+1));
 			queue.enqueue(item.substring(i, i+1));
