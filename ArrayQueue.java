@@ -59,8 +59,7 @@ public class ArrayQueue implements Queue {
 			System.arraycopy(arr, 0, new_arr, arr.length-head, tail);
 		}
 		else{
-			System.out.println("else");
-			System.arraycopy(arr, head, new_arr, 0, tail- head);
+ 			System.arraycopy(arr, head, new_arr, 0, tail- head);
 		}
 		
 		tail = arr.length+1;
