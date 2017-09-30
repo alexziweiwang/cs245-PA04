@@ -75,7 +75,7 @@ public class ArrayQueue implements Queue {
 	 * 			whether the queue is full or not
 	 */
 	private boolean full(){
-		if((arr.length-head)+tail + 1 ==arr.length||head-tail == 1){
+		if(head-tail == 1){
 			return true;
 		}
 		return false;
